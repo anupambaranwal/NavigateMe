@@ -29,6 +29,17 @@ Refer to the following articles on the basics of Git and Github and can also con
 - [How to create a Pull Request](https://opensource.com/article/19/7/create-pull-request-github)
 - [Getting started with Git and GitHub](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6)
 
+## What are some pre-requisites?
+
+- MySQL
+  - Install the community version of mySQL from the [official mySQL documentation page](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/).
+  - Create root user credentials during installation.
+  - Verify the installation, running the command  `mysql -uroot -p -hlocalhost` should open the mySQL monitor. (Enter the root password when prompted)
+- StanfordCoreNLP
+  - StanfordCoreNLP has a dependency on Java 8. `java -version` should complete successfully with version 1.8 or higher.
+  - Windows- Download as a .zip file from [here](https://stanfordnlp.github.io/CoreNLP/download.html).  
+  - Linux and MacOS- Follow the instructions to download the file from [here](https://stanfordnlp.github.io/CoreNLP/download.html).
+
 
 ## 💥 Contribution
 
