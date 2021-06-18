@@ -60,24 +60,26 @@ Verify creation of the database
 ```
 show databases
 ```
-**4.** Unzip the StanfordCoreNLP package in the repository and keep the file paths stanford-corenlp-x.x.x.jar and stanford-corenlp-x.x.x-models.jar handy. Run git update-index --assume-unchanged ENV/.env
+**4.** Unzip the StanfordCoreNLP package in the repository and keep the file paths stanford-corenlp-x.x.x.jar and stanford-corenlp-x.x.x-models.jar handy. 
+
+Run 
+```
+git update-index --assume-unchanged ENV/.env
+```
 Fill the existing template in ENV/.env with the corresponding values following the KEY=VALUE format
-Create Facebook app from here. Fill out basic information.
-Set Up Messenger option under Add a Product.
-Generate the Access Token by creating a facebook page for your bot by clicking on Create New Page button.
-Click on Add or Remove Pages and add your facebook page just created.
-Click on Generate Token and copy the token to the ENV/.env file as ACCESS_TOKEN=<YOUR_ACCESS_TOKEN>.
-**5.** Install ngrok.
-Open a terminal window, type ngrok http 5000. Once you do this, a screen will appear with a link after the “Forwarding” section — make sure to copy the link that begins with “https”.
-Click on Add Callback URL under Webhooks section. Paste the above link in the Callback URL. Add Verify Token of your choice. Copy Verify Token you added in the ENV/.env file as VERIFY_TOKEN=YOUR_VERIFY_TOKEN. Hit Verify and Save
-Click on Add Subscriptions. Check messages, messaging_postbacks, message_deliveries, messaging_pre_checkouts boxes.
-Run python app.py
-You can interact with bot on Facebook Messenger.
+
+**5.**  Run 
+```
+python app.py
+```
+
 **6.** Navigate to the project directory.
 ```bash
 cd NavigateMe
 ```
+
 **7.** Make changes in source code.
+
 **8.** Stage your changes and commit
 ```bash
 #Add changes to Index
@@ -85,19 +87,26 @@ git add .
 #Commit to the local repo
 git commit -m "<your_commit_message>"
 ```
+
 **9.** Push your local commits to the remote repo.
 ```bash
 git push
 ```
+
 **10.** Create a [PR](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) !
+
 **11.** **Congratulations!** Sit and relax, you've made your contribution to [NavigateMe](https://github.com/anupam-b/NavigateMe/) project.
+
 ## 📢  Open Source Program
+
 ### This Project is a part of the Lets Grow More Summer of Code
 <p align="center">
 <img src="https://user-images.githubusercontent.com/60106112/121303829-28c07900-c919-11eb-8cf2-afd39b5c54ab.png" alt="Lets Grow More Summer of Code">
 </p>
+
 ## ⭐ Issues:
 For major changes, you are welcomed to open an issue and discuss what you would like to contribute. Enhancements will be appreciated.
+
 ## Hall of Fame
 ✨ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
