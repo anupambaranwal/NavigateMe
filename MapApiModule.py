@@ -2,7 +2,6 @@ import openrouteservice as ors
 import folium
 import urllib
 import config
-from constants import BASE_URL
 import logging
 import logger_config
 import webbrowser
@@ -12,7 +11,7 @@ log = logging.getLogger(__name__)
 log.info("Entered module: %s" % __name__)
 
 try:
-    client = ors.Client(key='5b3ce3597851110001cf62488983aab20e7b4c8daaaab49d8babfdf2')  # global variable client
+    client = ors.Client(key=config.key)  # global variable client
 except ValueError as e:
     logging.debug(e)
     client = None
@@ -111,24 +110,6 @@ def geocoding(search_location):
     m.save("mymap.html")
     webbrowser.open("mymap.html")
     return list((result['geometry']['coordinates']))
-
-
-@logger_config.logger
-def mapsstatic(address, zoom=13, size="600x350"):
-    result_url = (
-        BASE_URL["mapsstatic"]
-        + "?"
-        + urllib.parse.urlencode(
-            {
-                "center": _get_location(address),
-                "zoom": zoom,
-                "size": size,
-                "key": config.key,
-            }
-        )
-    )
-    logging.debug(result_url)
-    return result_url
 
 
 @logger_config.logger
