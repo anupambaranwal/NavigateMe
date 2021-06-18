@@ -1,6 +1,6 @@
 import utilities
 import databaseconnect
-import googleMapsApiModule
+import MapApiModule
 from enum import Enum, auto
 import logging
 import logger_config
@@ -67,7 +67,7 @@ def message_to_bot(H, clf, learn_response):
             location_dict["origin"],
             location_dict["destination"],
         )
-        B = googleMapsApiModule.direction(origin, destination)
+        B = MapApiModule.direction(origin, destination)
         learn_response = LearnResponse.MESSAGE.name
         return B, learn_response
     if "bye" in H.lower().split(" "):  # check in words within H
@@ -186,7 +186,7 @@ def message_to_bot(H, clf, learn_response):
                 location_dict["origin"],
                 location_dict["destination"],
             )
-            B = googleMapsApiModule.direction(origin, destination)
+            B = MapApiModule.direction(origin, destination)
         else:
             B = "I didn't get that. Can you please give me the origin location?"
             learn_response = LearnResponse.ORIGIN.name
@@ -203,36 +203,36 @@ def message_to_bot(H, clf, learn_response):
         API_RESPONSE = False
         if any(sub in ["geocoding", *location.split()] for sub in subj) or root == "is":
             if "map" in noun:
-                B = googleMapsApiModule.mapsstatic(location)
+                B = MapApiModule.mapsstatic(location)
                 learn_response = LearnResponse.MESSAGE.name
                 API_RESPONSE = True
             else:
-                B = googleMapsApiModule.geocoding(location)
+                B = MapApiModule.geocoding(location)
                 learn_response = LearnResponse.MESSAGE.name
                 API_RESPONSE = True
         if any(sub in ["elevation", "height", "depth"] for sub in subj) or (
             "high" in adj
         ):
-            B = googleMapsApiModule.elevation(location)
+            B = MapApiModule.elevation(location)
             learn_response = LearnResponse.MESSAGE.name
             API_RESPONSE = True
         if any(sub in ["timezone"] for sub in subj) or ("timezone" in adj):
-            timezone_name, time_in_tz = googleMapsApiModule.timezone(location)
+            timezone_name, time_in_tz = MapApiModule.timezone(location)
             B = timezone_name
             learn_response = LearnResponse.MESSAGE.name
             API_RESPONSE = True
         if any(sub in ["time"] for sub in subj):
-            timezone_name, time_in_tz = googleMapsApiModule.timezone(location)
+            timezone_name, time_in_tz = MapApiModule.timezone(location)
             B = time_in_tz
             learn_response = LearnResponse.MESSAGE.name
             API_RESPONSE = True
         if any(nn in ["map"] for nn in noun):
-            B = googleMapsApiModule.mapsstatic(location)
+            B = MapApiModule.mapsstatic(location)
             learn_response = LearnResponse.MESSAGE.name
             API_RESPONSE = True
         if not API_RESPONSE:
             try:
-                N_places = googleMapsApiModule.places(H)
+                N_places = MapApiModule.places(H)
                 B = "\n".join(f"{name}: {link}" for name, link in N_places.items())
                 if B == "":
                     B, learn_response = classf_B, classf_learn_response
