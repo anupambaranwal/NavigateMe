@@ -2,15 +2,23 @@
   <a href="#"><img src="https://capsule-render.vercel.app/api?type=rect&color=009ACD&height=100&section=header&text=Navigate-Me&fontSize=60%&fontColor=ffffff" alt="website title image"></a>
   <h2 align="center">This bot give users a new way to interact with Google Maps through text-based conversational interfaces.</h2>
 </p>
-<p align="center">
-  <a href = "https://www.python.org/"><img src="https://img.shields.io/badge/language-Python-blue?style=for-the-badge"></a>
- </p>
- <p align="center">
-<a href="https://github.com/anupam-b/NavigateMe/stargazers"><img src="https://img.shields.io/github/stars/anupam-b/NavigateMe?style=for-the-badge"></a>
-<a href="https://github.com/anupam-b/NavigateMe/network/members"><img src="https://img.shields.io/github/forks/anupam-b/NavigateMe?style=for-the-badge"> </a>
-<a href="https://github.com/anupam-b/NavigateMe/issues"><img src="https://img.shields.io/github/issues-raw/anupam-b/NavigateMe?style=for-the-badge"></a>
-<a href="https://github.com/anupam-b/NavigateMe/pulls"><img src="https://img.shields.io/github/issues-pr-raw/anupam-b/NavigateMe?style=for-the-badge"></a>
-</p>
+
+ <div align="center">
+
+<a href="https://github.com/anupam-b/NavigateMe"><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103"></a>
+<a href="https://github.com/anupam-b/NavigateMe"><img src="https://img.shields.io/badge/Built%20by-developers%20%3C%2F%3E-0059b3"></a>
+<a href="https://github.com/anupam-b/NavigateMe"><img src="https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=yellow"></a>
+<a href = "https://www.python.org/"><img src="https://img.shields.io/badge/language-Python-brightgreen?style=flat"></a>
+<a href="https://github.com/anupam-b/NavigateMe/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?v=103"></a>
+
+<a href="https://github.com/anupam-b/NavigateMe/graphs/contributors"><img src="https://img.shields.io/github/contributors/anupam-b/NavigateMe?color=brightgreen"></a>
+<a href="https://github.com/anupam-b/NavigateMe/stargazers"><img src="https://img.shields.io/github/stars/anupam-b/NavigateMe?color=0059b3"></a>
+<a href="https://github.com/anupam-b/NavigateMe/network/members"><img src="https://img.shields.io/github/forks/anupam-b/NavigateMe?color=yellow"></a>
+<a href="https://github.com/anupam-b/NavigateMe/issues"><img src="https://img.shields.io/github/issues/anupam-b/NavigateMe?color=0059b3"></a>
+<a href="https://github.com/anupam-b/NavigateMe/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed-raw/anupam-b/NavigateMe?color=yellow"></a>
+<a href="https://github.com/anupam-b/NavigateMe/pulls"><img src="https://img.shields.io/github/issues-pr/anupam-b/NavigateMe?color=brightgreen"></a>
+<a href="https://github.com/anupam-b/NavigateMe/pulls?q=is%3Apr+is%3Aclosed"><img src="https://img.shields.io/github/issues-pr-closed-raw/anupam-b/NavigateMe?color=0059b3"></a> 
+</div>
 
 
 ##  Motivation
